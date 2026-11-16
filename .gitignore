@@ -1,0 +1,32 @@
+
+# PAD - Plataforma de Auxílio Documental
+
+# Credenciais de produção
+/includes/conexao.php
+.env
+.env.*
+!.env.example
+pad_db_privado.php
+
+# Bancos de dados e backups
+/banco/
+*.sql
+*.bak
+*.backup
+*.zip
+
+# Arquivos de teste
+teste_conexao.php
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Configurações do computador
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependências instaladas
+/vendor/
