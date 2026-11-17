@@ -1,0 +1,24 @@
+
+# ==========================================
+# PAD - PLATAFORMA DE AUXÍLIO DOCUMENTAL
+# Arquivo: .htaccess principal
+# Ambiente atual: XAMPP
+# ==========================================
+
+# Impedir a listagem dos diretórios.
+Options -Indexes
+
+# Página personalizada para erros 404.
+ErrorDocument 404 /plataforma_auxilio_documental/404.php
+
+# Bloquear o acesso direto a arquivos
+# ocultos e arquivos técnicos ou de backup.
+<FilesMatch "(?i)(^\.|~$|\.(sql|sqlite|db|bak|old|orig|backup|log|ini|env|dist|swp|swo|md|zip|tar|gz|7z)$)">
+    Require all denied
+</FilesMatch>
+
+# Proteção contra interpretação incorreta
+# dos tipos de conteúdo pelo navegador.
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
