@@ -1,32 +1,81 @@
 
-# PAD - Plataforma de Auxílio Documental
+# ==========================================
+# PAD - PLATAFORMA DE AUXÍLIO DOCUMENTAL
+# Arquivo: .gitignore
+# ==========================================
 
-# Credenciais de produção
+# ==========================================
+# 1. CREDENCIAIS E CONFIGURAÇÕES PRIVADAS
+# ==========================================
+
+# Não publicar a conexão real com o banco.
 /includes/conexao.php
+
+# Variáveis de ambiente e dados privados.
 .env
 .env.*
 !.env.example
+
 pad_db_privado.php
 
-# Bancos de dados e backups
+# Chaves e certificados privados.
+*.key
+*.pem
+
+# ==========================================
+# 2. BANCOS DE DADOS E BACKUPS
+# ==========================================
+
+# Diretório de backups.
 /banco/
+
+# Ignorar arquivos SQL por padrão.
 *.sql
+
+# Permitir somente o SQL demonstrativo
+# preparado para avaliação académica.
+!/database/
+!/database/estrutura_pad.sql
+
+# Cópias de segurança.
 *.bak
 *.backup
 *.zip
+*.sql.gz
+*.db
+*.sqlite
 
-# Arquivos de teste
+# ==========================================
+# 3. ARQUIVOS DE TESTE
+# ==========================================
+
 teste_conexao.php
 
-# Arquivos temporários
+# ==========================================
+# 4. ARQUIVOS TEMPORÁRIOS
+# ==========================================
+
 *.log
 *.tmp
+*.swp
+*.swo
 
-# Configurações do computador
+# ==========================================
+# 5. CONFIGURAÇÕES DO COMPUTADOR
+# ==========================================
+
 .vscode/
 .idea/
+
 .DS_Store
 Thumbs.db
 
-# Dependências instaladas
+# ==========================================
+# 6. DEPENDÊNCIAS INSTALADAS
+# ==========================================
+
 /vendor/
+
+# ==========================================
+# FIM DO ARQUIVO
+# ==========================================
